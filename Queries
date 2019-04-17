@@ -1,0 +1,45 @@
+Query 1
+
+select team, medal, year, count(medal) from olympic_games group by team, medal, year;
+
+
+Query 2
+
+select hostcountry, hostcity, season, year from olympic_games group by year;
+
+Query 3
+
+select team, medal, count(medal), season, year from olympic_games group by year order by count(medal) desc;
+
+Query 4
+
+select medal, count(medal), team, year, sex from olympic_games group by team, medal, sex order by year, medal asc limit 10;
+
+
+code:
+
+import pandas as pd
+import sqlite3
+
+
+import pandas as pd 
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+import seaborn as sns
+%matplotlib inline 
+#from bubbly.bubbly import bubbleplot 
+#from __future__ import division
+import plotly.graph_objs as go
+import plotly.figure_factory as ff
+from plotly import tools
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+init_notebook_mode(connected=True)
+
+IS_LOCAL = False
+
+
+
+con = sqlite3.connect('../bootcamp/project2_olympics/olympics.db')
+
+medals = pd.read_sql_query("")
