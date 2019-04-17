@@ -1,0 +1,16 @@
+Query 1
+
+select team, medal, year, count(medal) from olympic_games group by team, medal, year;
+
+
+Query 2
+
+select hostcountry, hostcity, season, year from olympic_games group by year;
+
+Query 3
+
+select team, medal, count(medal), season, year from olympic_games group by year order by count(medal) desc;
+
+Query 4
+
+select medal, count(medal), team, year, sex from olympic_games group by team, medal, sex order by year, medal asc limit 10;
