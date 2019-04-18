@@ -9,6 +9,13 @@ body {
     height: 100%;
   }
 
+.navbar-brand{
+  font-size: 30px;
+}
+
+.nav navbar-nav navbar-right{
+  font-size: 30px;
+}
 
 .info {
     padding: 6px 15px;
