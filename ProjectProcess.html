@@ -39,11 +39,11 @@
                 <li><a href="Charts.html">Charts top 10 countries</a></li>
                 <li><a href="ProjectProcess.html">Project process </a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Graphs <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                           <li><a href="Timelapsmedalcount.html">Timelapse Medal count</a></li>
                           <li><a href="Hostcity.html">Host City</a></li>
-                          <li><a href="Goldmedals.html">Gold medals per year</a></li>
+                          <li><a href="Goldmedals.html">Gold medals</a></li>
                       </ul>
                 </li>
                 </ul>
@@ -63,7 +63,7 @@
         <li><a href="#4b" data-toggle="tab">Vizualisations</a>
         </li><li><a href="#5b" data-toggle="tab">Findings</a>
         </li>
-        <li><a href="#5b" data-toggle="tab">Strenghts and Limitations</a>
+        <li><a href="#6b" data-toggle="tab">Strenghts and Limitations</a>
         </li>
       </ul>
   
@@ -75,7 +75,7 @@
             <h4>The data was scraped from www.sports-reference.com in May 2018. </h4>
             <h4>the Winter and Summer Games were held in the same year up until 1992. After that, they staggered them such that Winter Games occur on a four year cycle starting with 1994, then Summer in 1996, then Winter in 1998, and so on.</h4>
             <br>   
-            <h4>Content</h4>
+            <h3>Content</h3>
             <h4>The file athlete_events.csv contains 271116 rows and 15 columns. Each row corresponds to an individual athlete competing in an individual Olympic event (athlete-events). The columns are:</h4>
              <h5>ID - Unique number for each athlete</h5>   
              <h5> Name - Athlete's name</h5>
@@ -94,11 +94,13 @@
              <h5>Medal - Gold, Silver, Bronze, or NA</h5>
               </div>
           </div>
-          <div class="tab-pane" id="2b">
+       <div class="tab-content clearfix">
+          <div class="tab-pane active" id="2b">
             <h3>Data Munging</h3>
             <h4>Some of the information in the dataset we did not use. We've deleted this information</h4>
             <h4>This is the Sport and Event and the Athlete and details about the athlete (name, age, height, weight)</h4>
           </div>
+        </div>
           <div class="tab-pane" id="3b">
             <h3>Used Programs</h3>
             <h4>We loaded the parts of the CSV file we planned to use into SQLite database</h4>
@@ -129,6 +131,9 @@
                 <h3>Strenghts and Limitations</h3>
                 <h4>The dataset contains a lot of information, which gives many options for research. 
                   This is a strength, but also a risk because it makes it harder to choose. </h4>
+                  <H4>A limitation in the datset is that it shows the hostcity , but it does not give the hostcountry or hostcontinent
+                    We're working with that information in one of the graphs, so we added this information to the dataset. 
+                  </H4>
               </div>
         </div>
     </div>
