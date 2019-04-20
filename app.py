@@ -24,6 +24,11 @@ def index():
     return render_template('layouts/index.html')
 
 
+@app.route('/ProjectProcess.html')
+def t():
+   
+    return render_template('layouts/ProjectProcess.html')
+
 @app.route('/charts')
 def charts():
     conn = sqlite3.connect('olympics.db')

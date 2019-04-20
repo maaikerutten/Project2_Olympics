@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+          <title>Medal Count Olympics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+           <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+           <!-- Include all compiled plugins (below), or include individual files as needed -->
+           <script src="js/bootstrap.min.js"></script>
+       
+           <!-- Bootstrap Dropdown Hover JS -->
+           <script src="js/bootstrap-dropdownhover.min.js"></script>
+
+   <!-- my CSS  -->
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  
+
+  <body>
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">OLYMPICS</a>
+              <img src="/static/images/small-Olympic-logo2.png"  width=160px;  height=60px;></img>
+              <img src="/static/images/logo.png"  width=180px; height=80px;, style= "background-color: #ffff"></img>
+            </div>
+               <ul class="nav navbar-nav navbar-right">
+                <li><a href="charts">Charts top 10 countries</a></li>
+                <li><a href="ProjectProcess.html">Project process </a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    Graphs <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="timelapse">Timelaps Medal count</a></li>
+                          <li><a href="hostcity">Host City</a></li>
+                          <li><a href="goldmedals">Gold medals</a></li>
+                      </ul>
+                </li>
+                </ul>
+          </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container"><h2>The Process of this project </h2></div>
+  <div id="exTab3" class="container">	
+  <ul  class="nav nav-pills">
+        <li class="active">
+          <a  href="#1b" data-toggle="tab">Selecting a subject and dataset</a>
+        </li>
+        <li><a href="#2b" data-toggle="tab">Data Munging</a>
+        </li>
+        <li><a href="#3b" data-toggle="tab">Used Programs</a>
+        </li>
+        <li><a href="#4b" data-toggle="tab">Vizualisations</a>
+        </li><li><a href="#5b" data-toggle="tab">Findings</a>
+        </li>
+        <li><a href="#6b" data-toggle="tab">Strenghts and Limitations</a>
+        </li>
+      </ul>
+  
+        <div class="tab-content clearfix">
+          <div class="tab-pane active" id="1b">
+            <h3>Selecting a subject and dataset</h3>
+            <h4>We decided to work with a dataset found on Kaggle.com that contains all the information about the Summer and Winter Olympic games since 1896. </h4>
+            <h4>This is a historical dataset on the modern Olympic Games, including all the Games from Athens 1896 to Rio 2016.</h4>
+            <h4>The data was scraped from www.sports-reference.com in May 2018. </h4>
+            <h4>the Winter and Summer Games were held in the same year up until 1992. After that, they staggered them such that Winter Games occur on a four year cycle starting with 1994, then Summer in 1996, then Winter in 1998, and so on.</h4>
+            <br>   
+            <h3>Content</h3>
+            <h4>The file athlete_events.csv contains 271116 rows and 15 columns. Each row corresponds to an individual athlete competing in an individual Olympic event (athlete-events). The columns are:</h4>
+             <h5>ID - Unique number for each athlete</h5>   
+             <h5> Name - Athlete's name</h5>
+             <h5>Sex - M or F</h5>
+             <h5>Age - Integer</h5>
+             <h5>Height - In centimeters</h5>
+             <h5>Weight - In kilograms</h5>
+             <h5>Team - Team name</h5>
+             <h5>NOC - National Olympic Committee 3-letter code</h5>
+             <h5>Games - Year and season</h5>
+             <h5>Year - Integer</h5>
+             <h5>Season - Summer or Winter</h5>
+             <h5>City - Host city</h5>
+             <h5>Sport - Sport</h5>
+             <h5>Event - Event</h5>
+             <h5>Medal - Gold, Silver, Bronze, or NA</h5>
+              </div>
+          </div>
+       <div class="tab-content clearfix">
+          <div class="tab-pane active" id="2b">
+            <h3>Data Munging</h3>
+            <h4>Some of the information in the dataset we did not use. We've deleted this information</h4>
+            <h4>This is the Sport and Event and the Athlete and details about the athlete (name, age, height, weight)</h4>
+          </div>
+        </div>
+          <div class="tab-pane" id="3b">
+            <h3>Used Programs</h3>
+            <h4>We loaded the parts of the CSV file we planned to use into SQLite database</h4>
+            <h4>For building the webpage, we used HTML and CSS. And bootstrap for the webpage layout</h4>
+            <h4>Python is used to query the database and to create interactive charts and graphs </h4>
+            <h4></h4>
+          </div>
+            <div class="tab-pane" id="4b">
+            <h3>Vizualisations</h3>
+            <h4>The webpage contains 3 visualizations:</h4>
+            <h4>* a bar chart which shows the top 10 teams (countries) with the highest number of medals 
+              scored during a selected year</h4>
+              <h4>* a map which show the hostcity for every year of the games. 
+                if you hoover over this map, you'll see the specific city and the year the games were organized in this city</h4>
+              <h4>* a map which shows the countries (teams) and the number of medals won by this country.
+                The hoover over shows the name of the team/country and the number of medals  </h4>
+                          </div>
+          <div class="tab-pane" id="5b">
+              <h3>Findings</h3>
+                          <h4>Interesting to see is that the host countries / host cities are often located in Europe. 
+                There have never been any games in Africa.
+                The host city is regularly located in Asia, but only a few times in Australia
+                North America hosted the games serveral times, but South America only twice
+              </h4>
+              <h4></h4>
+            </div>
+            <div class="tab-pane" id="6b">
+                <h3>Strenghts and Limitations</h3>
+                <h4>The dataset contains a lot of information, which gives many options for research. 
+                  This is a strength, but also a risk because it makes it harder to choose. </h4>
+                  <H4>A limitation in the datset is that it shows the hostcity , but it does not give the hostcountry or hostcontinent
+                    We're working with that information in one of the graphs, so we added this information to the dataset. 
+                  </H4>
+              </div>
+        </div>
+    </div>
+
+ </div>    
+  
+<img src="/static/images/Olympic-logo.png" class="img-responsive" alt="Responsive image"></img>
+
+  </body>
+</html>
