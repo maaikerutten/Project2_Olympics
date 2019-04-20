@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+          <title>Medal Count Olympics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+  <!-- stylesheet and leaflet library -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+  crossorigin=""></script>
+
+ <!-- D3 library  -->
+ <script src="https://d3js.org/d3.v5.min.js"></script>
+
+ <!-- my CSS  -->
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+ </head>
+  <body>
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">OLYMPICS</a>
+                    <img src="/static/images/small-Olympic-logo2.png"  width=160px;  height=60px;></img>
+                  <img src="/static/images/logo.png"  width=180px; height=80px;, style= "background-color: #ffff"></img>
+                  </div>
+                     <ul class="nav navbar-nav navbar-right">
+                      <li><a href="charts">Charts top 10 countries</a></li>
+                      <li><a href="ProjectProcess.html">Project process </a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Graphs <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="timelapse">Timelaps Medal count</a></li>
+                                <li><a href="hostcity">Host City</a></li>
+                                <li><a href="goldmedal">Gold medals</a></li>
+                            </ul>
+                      </li>
+                      </ul>
+                </div><!-- /.container-fluid -->
+        </nav>
+
+
+
+        <div class= "col-md-9" role="main">
+            <h1>120 years of Olympic games!</h1>
+            <div id="mymap"></div>
+            <h4>How is the divsion of medals between participating countries over the last 120 years? </h4>
+            <h4>Which countries scored the most medals? </h4>
+            <br>
+            <h4>An overview on hwo each individual country scored on Gold, Silver and Bronze medal during the Summer and Winter games per year and the overall winners is given</h4>        
+            <h4>Which city hosted the olympics in which year?</h4>
+          
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6, col-lg-6,col-sm-12, col-xs-12">. <img src="/static/images/all-logos.png" class="img-responsive" alt="Responsive image"></img></div>
+            </div>
+    </div>    
+<!-- The div  to inject map  MAP HERE-->
+ 
+
+ <!-- JS  -->
+ <script type="text/javascript" src="logic.js"></script>
+  </body>
+</html>
+
